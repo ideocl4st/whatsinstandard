@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
-    <title>스탠다드엔 어떤 세트가 포함되나요?</title>
+    <title>스탠다드가 뭐에요?</title>
     <meta charset="UTF-8">
     <meta name="description" content="매직: 더 개더링의 스탠다드 포맷을 보기 좋게 설명해주는 웹사이트" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,7 +25,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="mt-5 mb-3 border-bottom">
-            <h1>스탠다드엔 어떤 세트가 포함되나요?</h1>
+            <h1>스탠다드가 뭐에요?</h1>
             <div>
               <span>매직: 더 개더링</span>
               <span class="low-distraction"> / </span>
@@ -49,7 +49,7 @@
             <div class="card mb-4" v-for="sets in rounds(dropped(sets))">
               <div class="card-header text-muted">
                 <div>{{ sets[0].exit_date | relative }} 제외된 세트</div>
-                <small>날짜: {{ sets[0].exit_date | absolute }}</small>
+                <small>{{ sets[0].exit_date | absolute }}</small>
 			  </div>
               <ul class="list-group">
                 <li v-for="set in sets" class="list-group-item text-muted">
@@ -62,24 +62,23 @@
           <div class="card mb-4" v-bind:class="{ 'bg-danger text-light': sets[0].exit_date }" v-for="sets in pad(rounds(standard(sets).concat(unreleased(sets))))">
             <div class="card-header" v-if="sets[0].exit_date">
               <div>{{ sets[0].exit_date | relative }} 제외될 세트</div>
-              <small>날짜: {{ sets[0].exit_date | absolute }}</small>
-            </div>
-            <div class="card-header" v-else>
-              {{ sets[0].rough_exit_date }} 제외될 세트
-              <a v-if="sets[0].code == 'KLD' || sets[0].code == 'AKH' || sets[0].code == 'XLN'" class="tip"
+              <small>{{ sets[0].exit_date | absolute }}</small>
+			  <a v-if="sets[0].code == 'KLD' || sets[0].code == 'AKH' || sets[0].code == 'XLN'" class="tip"
               v-tippy="{html: '#why', interactive: true, theme: 'light'}"></a>
               <div id="why" style="display: none" v-tippy-html>
                 <div style="max-width: 50em">
-                  이게 무슨 사단이냐고요? 2014년에 매직 더 개더링 개발팀은 블럭을 축소하고 코어 세트를 폐지하면서 각 세트가 스탠다드에 포함되는 기간을 줄이는 시도를 했었습니다.<sup><a
+                  2018년 10월에 한번에 5개의 세트가 제외되는 이유는 2014년에 매직 더 개더링 개발팀이 블럭을 축소하고 코어 세트를 폐지하면서 각 세트가 스탠다드에 포함되는 기간을 줄이는 시도를 했다가<sup><a
                     target="_blank"
                     href="https://magic.wizards.com/ko/articles/archive/mm/%ED%83%88%EB%B0%94%EA%BF%88"
-                  >2</a></sup> 하지만 2017년에 원래 방식으로 돌아가겠다는 발표를 하게 되죠.<sup><a
+                  >2</a></sup> 2017년에 다시 원래 방침으로 돌아가겠다고 발표했기 때문입니다.<sup><a
                     target="_blank"
                     href="https://magic.wizards.com/ko/articles/archive/making-magic/metamorphosis-2-0-2017-06-12"
-                  >3</a></sup> 하지만 그 후유증은 아직도 지속되고 있는데, but the aftershock still affects Standard in the sets it left behind. These sets
-                  will drop in unintuitive ways, ending in Q4 2019.
+                  >3</a></sup> 2019년 4분기 부터는 코어 세트를 포함하여 매년 4개의 세트가 한번에 제외되는 방식으로 진행됩니다.
                 </div>
               </div>
+            </div>
+            <div class="card-header" v-else>
+              {{ sets[0].rough_exit_date }} 제외될 세트
             </div>
             <ul class="list-group list-group-flush text-dark">
               <li class="list-group-item" v-bind:class="{ 'disabled text-black-50 bg-transparent': !isReleased(set) }" v-for="set in sets">
@@ -90,14 +89,14 @@
                 <small v-if="!isReleased(set) && set.enter_date != null">
                   <div>{{ set.enter_date | relative }} 발매 예정</div>
                   <div v-if="set.code == 'RNA'">2018년 1월 발매 예정</div>
-                  <div v-else="set.code == 'RNA'">On {{ set.enter_date | absolute }}</div>
+                  <div v-else="set.code == 'RNA'">{{ set.enter_date | absolute }}</div>
                 </small>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-md-7">
-          <h2>스탠다드가 뭐에요?</h2>
+          <h2>스탠다드란?</h2>
           <p>
           <b>스탠다드</b>란 is a rotating group of <i>Magic: The Gathering</i> sets. Most sets enter Standard when they're
           released and drop out about twenty-one months later. At any given time, Standard contains between five and
@@ -126,16 +125,16 @@
           <p>
           <a
             target="_blank"
-            href="https://magic.wizards.com/ko/articles/archive/ways-play/%EB%82%9C%ED%88%AC%EC%97%90-%EC%B0%B8%EC%97%AC%ED%95%98%EC%8B%AD%EC%8B%9C%EC%98%A4-2018-03-22"><b>난투</b></a>는 스탠다드를 기반으로 만들어졌기 때문에 이 사이트에 명시된 스탠다드 로테이션 제도가 적용되지만, 별개의
+            href="https://magic.wizards.com/ko/articles/archive/ways-play/%EB%82%9C%ED%88%AC%EC%97%90-%EC%B0%B8%EC%97%AC%ED%95%98%EC%8B%AD%EC%8B%9C%EC%98%A4-2018-03-22"><b>난투</b></a>는 스탠다드를 기반으로 만들어진 포맷이기 때문에 스탠다드와 동일하게 세트가 제외되지만 고유의
           <a
             target="_blank"
             href="https://magic.wizards.com/en/articles/archive/news/future-brawl-2018-05-10"
           >금지 목록</a>이 적용됩니다.</p>
           <p>
-          <b>마스터즈</b> 세트(예: 모던 마스터즈, 이터널 마스터즈 등)나 커맨더 덱은 스탠다드에 절대 포함되지 않습니다.
+          모던 마스터즈나 이터널 마스터즈를 비롯한 마스터즈 세트나 커맨더 덱은 스탠다드 범위에 포함되지 않습니다.
           </p>
           <h3 class="mt-5">금지 카드 목록</h3>
-					<p>스탠다드 세트에 발매되었지만 아래 명시된 카드는 스탠다드 덱에 포함될 수 없습니다.</p>
+					<p>아래 명시된 카드는 스탠다드 범위에 들어가는 세트에 발매되었지만 각자 사연이 있어 스탠다드 덱에 포함될 수 없습니다.</p>
           <p><ul class="list-group">
             <li class="list-group-item">
               <span v-tippy class="icon tip" title="칼라데시"><i class="ss ss-kld"></i></span>
@@ -156,7 +155,7 @@
                 </a>
               </div>
               <small>
-                4색 에너지 덱 구성을 너무 쉽게 해주는 카드라서 금지되었습니다<sup><a target="_blank" href="https://magic.wizards.com/ko/articles/archive/news/january-15-2018-banned-and-restricted-announcement-2018-01-15">4</a></sup>
+                4색 에너지 덱 구성을 너무 쉽게 해주는 카드라서 금지되었습니다.<sup><a target="_blank" href="https://magic.wizards.com/ko/articles/archive/news/january-15-2018-banned-and-restricted-announcement-2018-01-15">4</a></sup>
               </small>
             </li>
             <li class="list-group-item">
@@ -167,7 +166,7 @@
                 </a>
               </div>
               <small>
-                Banned for being too efficient in too many deck types.<sup><a target="_blank" href="https://magic.wizards.com/ko/articles/archive/news/january-9-2017-banned-and-restricted-announcement-2017-01-09">1</a></sup>
+                "너무도 많은 덱에서 등장하여 형식의 다양성을 약화"시켜서 금지되었습니다.<sup><a target="_blank" href="https://magic.wizards.com/ko/articles/archive/news/january-9-2017-banned-and-restricted-announcement-2017-01-09">1</a></sup>
               </small>
             </a>
             <li class="list-group-item">
@@ -189,7 +188,7 @@
                 </a>
               </div>
               <small>
-                카드의 효율이 너무 좋고 에너지 덱이 청색을 비롯하여 3색 이상으로 구성하도록 강제하여 에너지 덱의 다양성을 해쳤기 때문에 금지되었습니다.<sup><a target="_blank" href="https://magic.wizards.com/ko/articles/archive/news/january-15-2018-banned-and-restricted-announcement-2018-01-15">4</a></sup>
+                카드의 성능이 너무 좋아서 에너지를 테마로 한 덱이 청색을 포함한 3색 이상으로 구성되도록 강제하여 에너지 덱의 다양성을 해쳤기 때문에 금지되었습니다.<sup><a target="_blank" href="https://magic.wizards.com/ko/articles/archive/news/january-15-2018-banned-and-restricted-announcement-2018-01-15">4</a></sup>
               </small>
             </li>
             <li class="list-group-item">
@@ -200,7 +199,7 @@
                 </a>
               </div>
               <small>
-                사실상 상대방의 생명점을 미리 깎고 시작해서(라고 말할 수 있을 정도로 견제할 수단이 없는 카드였기 때문에) 금지되었습니다.<sup><a target="_blank" href="https://magic.wizards.com/ko/articles/archive/news/january-15-2018-banned-and-restricted-announcement-2018-01-15">4</a></sup>
+                사실상 상대방의 생명점을 미리 깎고 시작해서(라고 말할 수 있을 정도로 견제할 방법이 없던 카드였기 때문에) 금지되었습니다.<sup><a target="_blank" href="https://magic.wizards.com/ko/articles/archive/news/january-15-2018-banned-and-restricted-announcement-2018-01-15">4</a></sup>
               </small>
             </li>
             <li class="list-group-item">
@@ -211,7 +210,7 @@
                 </a>
               </div>
               <small>
-                공격적인(어그로) 적색 덱을 상대하기 위한 전략(횡전개 및 생명점 회복)을 너무 효율적으로 맞받아치는 카드였기 때문에 금지되었습니다.<sup><a target="_blank" href="https://magic.wizards.com/ko/articles/archive/news/january-15-2018-banned-and-restricted-announcement-2018-01-15">4</a></sup>
+                적색 어그로 덱을 상대하기 위한 전략(횡전개 및 생명점 회복)을 완벽하게 무너뜨리는 카드였기 때문에 금지되었습니다.<sup><a target="_blank" href="https://magic.wizards.com/ko/articles/archive/news/january-15-2018-banned-and-restricted-announcement-2018-01-15">4</a></sup>
               </small>
             </li>
           </ul>
