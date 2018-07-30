@@ -1,4 +1,3 @@
-moment.locale('ko')
 var apiURL = '/api/v5/sets.json'
 var code = Vue.component('set-image', {
   props: ['code'],
@@ -34,10 +33,12 @@ var app = new Vue({
 
   filters: {
     relative: function(date) {
+      moment.locale('ko')
       return moment(date).fromNow()
     },
 
     absolute: function(date) {
+      moment.locale('ko')
       return moment(date).format('YYYY-MM-DD')
     }
   },
