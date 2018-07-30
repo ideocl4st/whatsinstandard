@@ -1,3 +1,4 @@
+moment.locale('ko')
 var apiURL = '/api/v5/sets.json'
 var code = Vue.component('set-image', {
   props: ['code'],
