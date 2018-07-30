@@ -8,132 +8,132 @@
   },
   "sets": [
     {
-      "name": "Battle for Zendikar",
-      "block": "Battle for Zendikar",
+      "name": "젠디카르 전투",
+      "block": "젠디카르 전투",
       "code": "BFZ",
       "enter_date": "2015-10-02T00:00:00.000",
       "exit_date": "2017-09-29T00:00:00.000",
-      "rough_exit_date": "Q4 2017"
+      "rough_exit_date": "2017년 4분기"
     },
     {
-      "name": "Oath of the Gatewatch",
-      "block": "Battle for Zendikar",
+      "name": "관문수호대의 맹세",
+      "block": "젠디카르 전투",
       "code": "OGW",
       "enter_date": "2016-01-22T00:00:00.000",
       "exit_date": "2017-09-29T00:00:00.000",
-      "rough_exit_date": "Q4 2017"
+      "rough_exit_date": "2017년 4분기"
     },
     {
-      "name": "Shadows over Innistrad",
-      "block": "Shadows over Innistrad",
+      "name": "이니스트라드에 드리운 그림자",
+      "block": "이니스트라드에 드리운 그림자",
       "code": "SOI",
       "enter_date": "2016-04-08T00:00:00.000",
       "exit_date": "2017-09-29T00:00:00.000",
-      "rough_exit_date": "Q4 2017"
+      "rough_exit_date": "2017년 4분기"
     },
     {
-      "name": "Welcome Deck 2016",
-      "block": "Shadows over Innistrad",
+      "name": "환영 덱 2016",
+      "block": "이니스트라드에 드리운 그림자",
       "code": "W16",
       "enter_date": "2016-04-09T00:00:00.000",
       "exit_date": "2017-09-29T00:00:00.000",
-      "rough_exit_date": "Q4 2017"
+      "rough_exit_date": "2017년 4분기"
     },
     {
-      "name": "Eldritch Moon",
-      "block": "Shadows over Innistrad",
+      "name": "섬뜩한 달",
+      "block": "이니스트라드에 드리운 그림자",
       "code": "EMN",
       "enter_date": "2016-07-21T00:00:00.000",
       "exit_date": "2017-09-29T00:00:00.000",
-      "rough_exit_date": "Q4 2017"
+      "rough_exit_date": "2017년 4분기"
     },
     {
-      "name": "Kaladesh",
-      "block": "Kaladesh",
+      "name": "칼라데시",
+      "block": "칼라데시",
       "code": "KLD",
       "enter_date": "2016-09-30T00:00:00.000",
       "exit_date": "2018-10-05T00:00:00.000",
-      "rough_exit_date": "Q4 2018"
+      "rough_exit_date": "2018년 4분기"
     },
     {
-      "name": "Aether Revolt",
-      "block": "Kaladesh",
+      "name": "에테르 봉기",
+      "block": "칼라데시",
       "code": "AER",
       "enter_date": "2017-01-20T00:00:00.000",
       "exit_date": "2018-10-05T00:00:00.000",
-      "rough_exit_date": "Q4 2018"
+      "rough_exit_date": "2018년 4분기"
     },
     {
-      "name": "Amonkhet",
-      "block": "Amonkhet",
+      "name": "아몬케트",
+      "block": "아몬케트",
       "code": "AKH",
       "enter_date": "2017-04-28T00:00:00.000",
       "exit_date": "2018-10-05T00:00:00.000",
-      "rough_exit_date": "Q4 2018"
+      "rough_exit_date": "2018년 4분기"
     },
     {
-      "name": "Welcome Deck 2017",
-      "block": "Amonkhet",
+      "name": "환영 덱 2017",
+      "block": "아몬케트",
       "code": "W17",
       "enter_date": "2017-04-28T00:00:00.000",
       "exit_date": "2018-10-05T00:00:00.000",
-      "rough_exit_date": "Q4 2018"
+      "rough_exit_date": "2018년 4분기"
     },
     {
-      "name": "Hour of Devastation",
-      "block": "Amonkhet",
+      "name": "파멸의 시간",
+      "block": "아몬케트",
       "code": "HOU",
       "enter_date": "2017-07-14T00:00:00.000",
       "exit_date": "2018-10-05T00:00:00.000",
-      "rough_exit_date": "Q4 2018"
+      "rough_exit_date": "2018년 4분기"
     },
     {
-      "name": "Ixalan",
-      "block": "Ixalan",
+      "name": "익살란",
+      "block": "익살란",
       "code": "XLN",
       "enter_date": "2017-09-29T00:00:00.000",
       "exit_date": null,
-      "rough_exit_date": "Q4 2019"
+      "rough_exit_date": "2019년 4분기"
     },
     {
-      "name": "Rivals of Ixalan",
-      "block": "Ixalan",
+      "name": "익살란",
+      "block": "익살란",
       "code": "RIX",
       "enter_date": "2018-01-19T00:00:00.000",
       "exit_date": null,
-      "rough_exit_date": "Q4 2019"
+      "rough_exit_date": "2019년 4분기"
     },
     {
-      "name": "Dominaria",
+      "name": "도미나리아",
       "block": null,
       "code": "DOM",
       "enter_date": "2018-04-27T00:00:00.000",
       "exit_date": null,
-      "rough_exit_date": "Q4 2019"
+      "rough_exit_date": "2019년 4분기"
     },
     {
-      "name": "Core 2019",
+      "name": "코어 2019",
       "block": null,
       "code": "M19",
       "enter_date": "2018-07-13T00:00:00.000",
       "exit_date": null,
-      "rough_exit_date": "Q4 2019"
+      "rough_exit_date": "2019년 4분기"
     },
     {
-      "name": "Guilds of Ravnica",
+      "name": "라브니카의 길드",
       "block": null,
       "code": "GRN",
       "enter_date": "2018-10-05T00:00:00.000",
       "exit_date": null,
-      "rough_exit_date": "Q4 2020"
+      "rough_exit_date": "2020년 4분기"
     },
     {
-      "name": "Ravnica Allegiance",
+      "name": "라브니카의 충성",
       "block": null,
       "code": "RNA",
       "enter_date": "2019-01-01T00:00:00.000",
       "exit_date": null,
-      "rough_exit_date": "Q4 2020"
+      "rough_exit_date": "2020년 4분기"
     }
   ]
 }

@@ -43,7 +43,7 @@
           <div class="recently-dropped-toggle-container">
             <button id="recently-dropped-toggler" href="#" class="btn btn-sm btn-block btn-outline-secondary mb-3" v-on:click.prevent="toggleRecentlyDropped">
               <span v-if="!showRecentlyDropped">최근에 제외된 세트 표시</span>
-              <span v-else>최근에 제외된 세트 제외</span>
+              <span v-else>최근에 제외된 세트 숨김</span>
             </button>
           </div>
           <div id="recently-dropped" v-if="showRecentlyDropped">
@@ -90,7 +90,7 @@
                 </div>
                 <small v-if="!isReleased(set) && set.enter_date != null">
                   <div>Releasing {{ set.enter_date | relative }}</div>
-                  <div v-if="set.code == 'RNA'">On 2018-01-??</div>
+                  <div v-if="set.code == 'RNA'">2018년 1월 발매 예정</div>
                   <div v-else="set.code == 'RNA'">On {{ set.enter_date | absolute }}</div>
                 </small>
               </li>
